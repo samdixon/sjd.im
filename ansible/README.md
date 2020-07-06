@@ -1,1 +1,5 @@
-ansible files for site deployment
+### running
+
+`ansible-playbook site.yml -i production`
+
+### deploy only
