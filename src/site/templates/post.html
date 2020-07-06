@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}sjd.im - {{ post.title }}{% endblock %}
+{% block content %}
+    <div class="post">
+        <h4>{{ post.title }}</h4>
+        <h5>Published: {{ post.date }}</h5>
+        <h5>Author: {{ post.author }}</h5>
+        <h5>Tags: {% for i in post.tags %}{{ i}},{% endfor %}</h5>
+
+        {{ markdown|safe }}
+    </div>
+{% endblock %}

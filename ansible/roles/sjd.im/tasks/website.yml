@@ -1,0 +1,5 @@
+---
+- name: clone sjd.im repo
+  git:
+    repo: "https://github.com/samdixon/sjd.im.git"
+    dest: "/sjd.im"

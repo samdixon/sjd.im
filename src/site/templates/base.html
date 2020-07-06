@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>sjd.im - {% block title %} {% endblock %}</title>
+        <meta name="description" content="sjd.im - Sam Dixon personal site">
+        <meta name="author" content="Sam Dixon">
+
+        <link type="text/css" rel=stylesheet href="/static/normalize.css">
+        <link type="text/css" rel=stylesheet href="/static/styles.css">
+
+    </head>
+    <body>
+        <nav>
+            <h4>Sam Dixon</h4>
+            <ul>
+                <li><a href="/about">about</a></li>
+                <li><a href="/blog">blog</a></li>
+                <li><a href="/notes">notes</a></li>
+                <li><a href="/projects">projects</a></li>
+                <li><a href="/resume">resume</a></li>
+                <li><a href="/contact">contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="main">
+                <div class="section-content">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

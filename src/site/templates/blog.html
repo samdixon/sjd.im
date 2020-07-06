@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+blog
+{% endblock %}
+{% block content %}
+    <h4>Posts</h4>
+        <table>
+        {% for i in metadata %}
+            <tr>
+                <td>{{ i.date }}</td>
+                <td><a href="/blog/{{ i.route }}">{{ i.title }}</a></td>
+            </tr>
+        {% endfor %}
+        </table>
+{% endblock %}

@@ -1,0 +1,12 @@
+---
+- name: Install webserver packages
+  become: true
+  apt:
+      pkg:
+          - curl
+          - htop
+          - vim
+          - python3
+          - python3-pip
+          - virtualenv
+          - nginx

@@ -1,0 +1,6 @@
+---
+- name: Install pip packages and virtualenv
+  pip:
+    virtualenv_python: python3
+    virtualenv: "/home/sdixon/.venv/sjd.im-testing"
+    requirements: "/home/sdixon/sjd.im/ansible/requirements.txt"
