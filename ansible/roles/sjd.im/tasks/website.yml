@@ -12,7 +12,7 @@
     path: /sjd.im
     owner: sdixon
     group: sdixon
-    mode: '0440'
+    mode: '0755'
     recurse: yes
 
 - name: copy nginx conf
