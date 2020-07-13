@@ -1,0 +1,28 @@
+nav {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 1.2em;
+}
+
+nav ul {
+    margin: 0 auto;
+    padding:0 auto;
+}
+
+nav li {
+    display: inline;
+    padding-right: 10px;
+}
+
+.main {
+    width: auto;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+
+.section-content img {
+    display: none;
+}
