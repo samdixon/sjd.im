@@ -1,4 +1,8 @@
-### sjd.im source code
+### sjd.im website source code
 
-`ansible` - ansible files for server setup
-`src` - webserver src code files
+All the code involved in structuring, deploying, and managing my personal site. Site is available at [sjd.im](https://sjd.im)
+
+#### directory structure
+`src` - source files related to site
+
+`deploy` - source files related to deployment
