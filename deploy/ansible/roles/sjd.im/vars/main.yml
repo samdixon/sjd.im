@@ -1,3 +1,5 @@
 ---
 ansible_python_interpreter: /usr/bin/python3
 nginx_conf: default
+requirements: requirements.txt
+service: sjdim.service

@@ -1,0 +1,16 @@
+---
+- name: sjdim systemd service file
+  become: true
+  copy:
+    src: "{{ service }}"
+    dest: "/lib/systemd/system/sjdim.service"
+  tags:
+    - deploy
+- name: enable service
+  become: true
+  systemd:
+    name: sjdim
+    state: restarted
+    enabled: yes
+  tags:
+    - deploy

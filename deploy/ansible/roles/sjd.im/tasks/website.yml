@@ -3,26 +3,35 @@
   become: true
   git:
     repo: "https://github.com/samdixon/sjd.im.git"
-    dest: "/sjd.im"
+    dest: "/opt/sjd.im"
     update: yes
+    force: yes
+  tags:
+    - deploy
 
 - name: set repo permissions
   become: true
   file:
-    path: /sjd.im
+    path: /opt/sjd.im
     owner: sdixon
     group: sdixon
     mode: '0755'
     recurse: yes
+  tags:
+    - deploy
 
 - name: copy nginx conf
   become: true
   copy:
     src: "{{ nginx_conf }}"
     dest: /etc/nginx/sites-enabled/default
+  tags:
+    - deploy
 
 - name: restart nginx
   become: true
   service:
     name: nginx
     state: reloaded
+  tags:
+    - deploy

@@ -1,6 +1,10 @@
+- name: add users
+  import_tasks: users.yml
 - name: import packages
   import_tasks: packages.yml
 - name: import pip
   import_tasks: pip.yml
 - name: import website
   import_tasks: website.yml
+- name: systemd setup
+  import_tasks: service.yml

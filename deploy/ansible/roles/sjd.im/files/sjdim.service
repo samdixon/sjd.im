@@ -1,0 +1,11 @@
+[Unit]
+Description = sjd.im website
+After = network.target
+
+[Service]
+User = sdixon
+Type = simple
+ExecStart = /home/sdixon/.venv/sjd.im-venv/bin/gunicorn --chdir /opt/sjd.im/src/site app:app
+
+[Install]
+WantedBy = multi-user.target
