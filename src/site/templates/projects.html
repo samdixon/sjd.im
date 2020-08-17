@@ -1,16 +1,26 @@
 {% extends "base.html" %}
 {% block title %}projects{% endblock %}
+{% block header %}Projects{% endblock %}
 {% block content %}
-    <h4>Projects</h4>
     <p>Below is a current list of personal projects I am working on. More (and possibly incomplete) projects are available at my <a href="https://github.com/samdixon" target="blank">github</a>.</p>
     <table>
+        <th>
+            <tr>
+                <td><span class="header">Project</span></td>
+                <td><span class="header">Description</span></td>
+                <td><span class="header">Link</span></td>
+            </tr>
+        </th>
         <tr>
             <td>easy-publish</td>
-            <td><a href="https://github.com/samdixon/easy-publish">https://github.com/samdixon/easy-publish</a></td>
+            <td>easy-publish makes it easy to publish text files as blog posts.</td>
+            <td><a href="https://github.com/samdixon/easy-publish" target="_blank">github</a></td>
+
         </tr>
         <tr>
             <td>sjd.im</td>
-            <td><a href="https://github.com/samdixon/sjd.im">https://github.com/samdixon/sjd.im</a></td>
+            <td>All files related to my personal website. I use my site as a playground to experiment and learn new technologies.</td>
+            <td><a href="https://github.com/samdixon/sjd.im" target="_blank">github</a></td>
         </tr>
     </table>
 {% endblock %}

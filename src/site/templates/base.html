@@ -15,24 +15,31 @@
 
     </head>
     <body>
-        <nav>
-            <h4>Sam Dixon</h4>
-            <ul>
-                <li><a href="/about">about</a></li>
-                <li><a href="/blog">blog</a></li>
-                <li><a href="/notes">notes</a></li>
-                <li><a href="/projects">projects</a></li>
-                <li><a href="/resume">resume</a></li>
-                <li><a href="/contact">contact</a></li>
-            </ul>
-        </nav>
-        <section>
-            <div class="main">
-                <div class="section-content">
-                    {% block content %}
-                    {% endblock %}
+        <div id="wrapper">
+            <nav>
+                <h4><span class="header">Sam Dixon</span></h4>
+                <ul>
+                    <li><a href="/about">about</a></li>
+                    <li><a href="/blog">blog</a></li>
+                    <li><a href="https://plan.cat/~sjd" target="_blank">plan</a></li>
+                    <li><a href="/notes">notes</a></li>
+                    <li><a href="/projects">projects</a></li>
+                    <li><a href="/resume">resume</a></li>
+                    <li><a href="/contact">contact</a></li>
+                </ul>
+            </nav>
+            <section>
+                <div class="main">
+                    <div class="section-content">
+                        <h4><span class="header">
+                        {% block header %}
+                        {% endblock %}
+                        </span></h4>
+                        {% block content %}
+                        {% endblock %}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </body>
 </html>
