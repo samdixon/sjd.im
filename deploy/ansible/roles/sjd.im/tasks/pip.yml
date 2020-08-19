@@ -2,11 +2,11 @@
 - name: copy requirements.txt
   copy:
     src: "{{ requirements }}"
-    dest: /home/sdixon/.venv/sjd.im-venv
+    dest: "/home/sdixon/{{ requirements }}"
   tags:
     - deploy
 - name: Install pip packages and virtualenv
   pip:
     virtualenv_python: python3
     virtualenv: "/home/sdixon/.venv/sjd.im-venv"
-    requirements: "/home/sdixon/.venv/sjd.im-venv/{{ requirements }}"
+    requirements: "/home/sdixon/{{ requirements }}"
