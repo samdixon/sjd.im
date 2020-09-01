@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 {% block title %}sjd.im - {{ post.title }}{% endblock %}
-{% block header %}Post: {{ post.title }}{% endblock %}
 {% block content %}
     <div class="post">
+        <h2>{{ post.title }}</h2>
         <h5>Published: {{ post.date }}</h5>
-
         {{ markdown|safe }}
     </div>
 {% endblock %}

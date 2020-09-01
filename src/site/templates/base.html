@@ -19,12 +19,11 @@
             <nav>
                 <h4><span class="header">Sam Dixon</span></h4>
                 <ul>
-                    <li><a href="/about">about</a></li>
-                    <li><a href="/blog">blog</a></li>
-                    <li><a href="/notes">notes</a></li>
-                    <li><a href="/projects">projects</a></li>
-                    <li><a href="/resume">resume</a></li>
-                    <li><a href="/contact">contact</a></li>
+                    <li class="{% block nav_blog %}{% endblock %}"><a href="/blog">blog</a></li>
+                    <li class="{% block nav_notes %}{% endblock %}"><a href="/notes">notes</a></li>
+                    <li class="{% block nav_projects %}{% endblock %}"><a href="/projects">projects</a></li>
+                    <li class="{% block nav_about %}{% endblock %}"><a href="/about">about</a></li>
+                    <li class="{% block nav_contact %}{% endblock %}"><a href="/contact">contact</a></li>
                 </ul>
             </nav>
             <section>

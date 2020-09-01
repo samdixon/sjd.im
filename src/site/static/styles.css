@@ -1,11 +1,6 @@
-@font-face {
-    font-family: "Libre Baskerville";
-    src: url("/static/LibreBaskerville-Regular.ttf");
-}
-
 body {
     max-width: 100%;
-    font-family: 'Libre Baskerville', serif;
+    font-family: Sans-Serif;
     background-color: 	#f8f8ff;
 }
 
@@ -28,17 +23,15 @@ a[href^="mailto:"] {
 }
 
 #wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 940px;
+    max-width: 720px;
     margin: 0 auto;
     padding-top: 5px;
 }
 
 nav {
-    flex-basis: auto;
-    flex-grow: 1;
     padding-right: 15px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 nav h4, section h4 {
@@ -55,14 +48,17 @@ nav ul {
 }
 
 nav ul li {
-    padding: 0 0 5px 0;
+    padding-right: .5em;
+    display: inline;
+}
+
+nav ul li.active {
+    text-decoration: underline;
 }
 
 section {
     padding: 0;
     margin: 0;
-    flex-basis: 0;
-    flex-grow: 999;
 }
 
 section p{
@@ -89,8 +85,42 @@ section td {
     margin: 0;
 }
 
+.post * {
+    padding: 0;
+    margin: 0;
+}
+
 .post h5 {
-    padding: 0 0 10px 0;
+    padding: 0 0 1em 0;
     margin: 0;
     font-weight: normal;
+}
+
+.post pre {
+    padding-bottom: 1em;
+}
+.post code {
+    vertical-align: center;
+    display: block;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    padding-left: 1em;
+    margin: 0;
+    border-left: 5px solid black;
+    background-color: lightgray;
+    color: black;
+    overflow-x: scroll;
+}
+
+.post p{
+    padding-bottom: 1em;
+}
+
+table {
+    padding: 0;
+    margin: 0;
+}
+
+tr {
+    padding: 0;
 }
