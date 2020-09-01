@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 from easy_publish import generate_posts
 import mistune
 
@@ -8,7 +8,7 @@ app = Flask(__name__, static_url_path="/static")
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return redirect("/blog")
 
 @app.route('/about')
 def about():
