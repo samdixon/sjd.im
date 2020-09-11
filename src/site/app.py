@@ -27,17 +27,9 @@ def blogpost(p):
         post=post,
         markdown=mistune.markdown(post.content))
 
-@app.route('/notes')
-def notes():
-    return render_template("notes.html")
-
 @app.route('/projects')
 def projects():
     return render_template("projects.html")
-
-@app.route('/resume')
-def resume():
-    return render_template("resume.html")
 
 @app.route('/contact')
 def contact():
