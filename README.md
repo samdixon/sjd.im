@@ -11,9 +11,11 @@ The easiest way to do local development is via docker/compose. Also included are
 Local development with Docker requires building the container and updating the `docker-compose.yml` file with your local version. Docker compose will mount the site directory and any local changes will be updated in the container. They are available on `localhost:5000`
 
 Build the container:
+
 `docker build ./Dockerfile -t sjd:1.x`
 
 Update docker-compose.yml with your container version & run:
+
 `docker-compose up -d`
 
 #### Pipenv
