@@ -20,11 +20,55 @@
   tags:
     - deploy
 
+- name: Ensure directory exists for local self-signed TLS certs.
+  become: true
+  file:
+    path: /etc/ssl/csr
+    state: directory
+  tags:
+    - dev
+
+- name: Generate an OpenSSL private key.
+  become: true
+  openssl_privatekey:
+    path: /etc/ssl/private/nginx-selfsigned.key
+  tags:
+    - dev
+
+- name: Generate an OpenSSL CSR.
+  become: true
+  openssl_csr:
+    path: /etc/ssl/csr/nginx-selfsigned.csr
+    privatekey_path: /etc/ssl/private/nginx-selfsigned.key
+    common_name: "test"
+  tags:
+    - dev
+
+- name: Generate a Self Signed OpenSSL certificate.
+  become: true
+  openssl_certificate:
+    path: /etc/ssl/certs/nginx-selfsigned.crt
+    privatekey_path: /etc/ssl/private/nginx-selfsigned.key
+    csr_path: /etc/ssl/csr/nginx-selfsigned.csr
+    provider: selfsigned
+  tags:
+    - dev
+
 - name: copy nginx conf
   become: true
   copy:
     src: "{{ nginx_conf }}"
+    dest: /etc/nginx/sites-available/default
+  tags:
+    - deploy
+
+- name: Symlink sites-enabled
+  become: true
+  file:
+    src: /etc/nginx/sites-available/default
     dest: /etc/nginx/sites-enabled/default
+    state: link
+    force: yes
   tags:
     - deploy
 
