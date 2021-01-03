@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+   site:
+     image: sjd:1.0
+     ports:
+       - 5000:5000
+     volumes:
+       - ./src/site:/site
+     restart: always
+     environment:
+       FLASK_ENV: development
+       TEMPLATES_AUTO_RELOAD: "True"
