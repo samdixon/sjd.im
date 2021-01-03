@@ -68,13 +68,6 @@ section p{
     margin: 0;
 }
 
-section img {
-    padding: 0;
-    margin: 0;
-    float: right;
-    display: inline;
-}
-
 .header {
     font-weight: bold;
 }
@@ -121,6 +114,21 @@ section td {
 table {
     padding: 0;
     margin: 0;
+}
+
+
+.pic-wrapper {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    float: right;
+    display: inline;
+    width: 252px;
+    height: 359px;
+}
+
+.pic {
+    position: absolute;
 }
 
 tr {
