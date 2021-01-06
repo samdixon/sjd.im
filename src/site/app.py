@@ -8,7 +8,7 @@ app = Flask(__name__, static_url_path="/static")
 
 @app.route('/')
 def index():
-    return redirect("/blog")
+    return render_template("blog.html", metadata=posts.metadata)
 
 @app.route('/about')
 def about():
@@ -16,8 +16,7 @@ def about():
 
 @app.route('/blog')
 def blog():
-    metadata = posts.metadata
-    return render_template("blog.html", metadata=posts.metadata) # feed it the list of posts which includes metadata
+    return render_template("blog.html", metadata=posts.metadata)
 
 @app.route('/blog/<p>')
 def blogpost(p):
