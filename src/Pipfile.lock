@@ -26,11 +26,11 @@
         },
         "easy-publish": {
             "hashes": [
-                "sha256:9b889803e52c649777b57d2d4c4c9e5f6d22bcd62e81b125bd83f1204898ad43",
-                "sha256:aee919b87b9bd8076d358c38c7552f19032604a4d8241e4e7fac208df47334e0"
+                "sha256:682cc0746966c0dcc93547a3d3366ff7055658b500063217a2afd2157ee9aee7",
+                "sha256:957e66e14b2336cc79127033ef1a20e4febd270fab17e8f48bc40bbc1676a29d"
             ],
             "index": "pypi",
-            "version": "==0.0.10"
+            "version": "==0.0.11"
         },
         "flask": {
             "hashes": [
