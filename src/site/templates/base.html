@@ -1,46 +1,38 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-        <title>sjd.im - {% block title %} {% endblock %}</title>
-        <meta name="description" content="sjd.im - Sam Dixon personal site">
-        <meta name="author" content="Sam Dixon">
+    <title>sjd.im - {% block title %} {% endblock %}</title>
+    <meta name="description" content="sjd.im - personal website of Sam Dixon">
+    <meta name="author" content="Sam Dixon">
 
-        <link type="text/css" rel=stylesheet href="/static/normalize.css">
-        <link type="text/css" rel=stylesheet href="/static/styles.css">
-        <link type="text/css" rel=stylesheet media="only screen and (min-device-width: 0px) and (max-device-width: 1024px)" href="/static/mobile.css">
-        <link rel="icon" href="static/images/favicon.svg" sizes="any" type="image/svg+xml">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
-
-
-    </head>
-    <body>
-        <div id="wrapper">
-            <nav>
-                <h4><span class="header">Sam Dixon</span></h4>
-                <ul>
-                    <li class="{% block nav_blog %}{% endblock %}"><a href="/blog">blog</a></li>
-                    <li class="{% block nav_projects %}{% endblock %}"><a href="/projects">projects</a></li>
-                    <li class="{% block nav_about %}{% endblock %}"><a href="/about">about</a></li>
-                    <li class="{% block nav_contact %}{% endblock %}"><a href="/contact">contact</a></li>
-                </ul>
-            </nav>
-            <section>
-                <div class="main">
-                    <div class="section-content">
-                        <h4><span class="header">
-                        {% block header %}
-                        {% endblock %}
-                        </span></h4>
-                        {% block content %}
-                        {% endblock %}
-                    </div>
-                </div>
-            </section>
-            <footer>
-                2020-2021 Sam Dixon
-            </footer>
-        </div>
-    </body>
+    <link type="text/css" rel=stylesheet href="{{ url_for('static', filename='normalize.css') }}">
+    <link type="text/css" rel=stylesheet href="{{ url_for('static', filename='styles.css') }}">
+    <link type="text/css" rel=stylesheet media="only screen and (min-device-width: 0px) and (max-device-width: 1024px)" href="{{ url_for('static', filename='mobile.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg')}}" sizes="any" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav>
+        <h4>Sam Dixon</h4>
+        <ul>
+          <li class="{% block nav_blog %}{% endblock %}">
+            <a href="{{ url_for ('blog') }}">blog</a>
+          </li>
+          <li class="{% block nav_projects %}{% endblock %}">
+            <a href="{{ url_for('projects') }}">projects</a>
+          </li>
+          <li class="{% block nav_about %}{% endblock %}">
+            <a href="{{ url_for('about') }}">about</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+            {% block content %}
+            {% endblock %}
+      </section>
+    </div>
+  </body>
 </html>

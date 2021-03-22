@@ -2,12 +2,12 @@
 {% block title %}blog{% endblock %}
 {% block nav_blog %}active{% endblock %}
 {% block content %}
-        <table>
+<h3>Posts</h3>
+    <ul>
         {% for i in metadata %}
-            <tr>
-                <td>{{ i.date }}</td>
-                <td><a href="/blog/{{ i.route }}">{{ i.title }}</a></td>
-            </tr>
+        <li>
+        	{{ i.date }}&emsp;&emsp;&emsp;&emsp;<a href={{ url_for('blogpost', p=i.route) }}>{{ i.title}}</a>
+        </li>
         {% endfor %}
-        </table>
+    </ul>
 {% endblock %}
