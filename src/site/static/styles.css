@@ -1,17 +1,22 @@
+@import url("/static/font.css");
+
+/* Global Settings*/
 body {
     max-width: 100%;
-    font-family: Sans-Serif;
+    font-family: 'Source Sans 3', Sans-Serif;
     background-color: 	#f8f8ff;
-    font-size: 1.1em;
+}
+
+/* Global Font Settings*/
+h4 {
+    font-weight: 500;
+    margin: 0;
 }
 
 a {
+    color: #004394;
     text-decoration: none;
     word-wrap: break-word;
-}
-
-a:visited {
-    color: blue;
 }
 
 a[href^="https://"] {
@@ -24,22 +29,17 @@ a[href^="mailto:"] {
     padding-right: 13px;
 }
 
+/* Main Body Settings */
 #wrapper {
     max-width: 768px;
-    padding-left: 1em;
+    padding-left: .8em;
 }
 
+/* Nav */
 nav {
     padding-right: 15px;
-    padding-top: 1em;
+    padding-top: .8em;
     padding-bottom: 1em;
-}
-
-nav h4, section h4 {
-    font-weight: normal;
-    padding: 0;
-    padding-bottom: 8px;
-    margin: 0;
 }
 
 nav ul {
@@ -57,93 +57,119 @@ nav ul li.active {
     text-decoration: underline;
 }
 
+/* Section */
 section {
     padding: 0;
     margin: 0;
 }
 
-section p{
-    padding: 0 0 15px 0;
-    margin: 0;
+section h3 {
+    padding: 0;
+    margin: .5em 0;
+    font-weight: 600;
 }
 
-.header {
-    font-weight: bold;
-}
-section td {
-    padding-right: 10px;
+section p {
+    margin-top: 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #222;
 }
 
-.main {
+section ul {
+    margin-top: 0;
+    padding: 0;
+}
+
+section li {
+    list-style: none;
+}
+
+span.table-title {
     padding: 0;
     margin: 0;
 }
 
-.post * {
+table {
+    padding: 0 0 1em 0;
+    margin: 0;
+}
+
+th {
+    text-align: left;
+}
+
+td {
+    padding-right: 15px;
+}
+
+.post-header {
+    margin: 0 0 1em 0;
+}
+
+.post-header a {
     padding: 0;
+    margin: 0;
+    font-size: .8em;
+}
+
+.post-header h2 {
     margin: 0;
 }
 
 .post h5 {
-    padding: 0 0 1em 0;
     margin: 0;
     font-weight: normal;
 }
 
 .post pre {
-    padding-bottom: 1em;
-}
-.post code {
-    vertical-align: center;
+    font-size: 90%;
+    line-height: 1.2em;
+    font-family: "Courier 10 Pitch", Courier, monospace; 
+    white-space: pre; 
+    white-space: pre-wrap; 
+    white-space: -moz-pre-wrap; 
+    white-space: -o-pre-wrap; 
+    height:1%;
+    width: auto;
     display: block;
-    padding-bottom: .5em;
-    padding-top: .5em;
-    padding-left: 1em;
-    margin: 0;
-    border-left: 5px solid black;
-    background-color: lightgray;
-    color: black;
-    overflow-x: scroll;
+    clear: both;
+    color: #555555;
+    padding: 1em 1em;
+    margin 0;
+    background: #f4f4f4;
+    border: solid 1px #e1e1e1
 }
 
-.post p{
-    padding-bottom: 1em;
+.post code { 
+    font-size: 90%;
+    line-height: 1em;
+    font-family: monospace;
+    display: inline; 
+    color: #555555;
+    background: #f4f4f4;
 }
 
 .post img {
     max-width: 100%
 }
 
-table {
-    padding: 0;
-    margin: 0;
-}
 
-
+/* Need this so the pic doesn't load in and visually shift the text */
 .pic-wrapper {
-    position: relative;
-    padding: 0;
-    margin: 0;
     float: right;
-    display: inline;
+    padding: .1em 1em;
+    margin: 0;
     width: 252px;
     height: 359px;
 }
 
-.pic {
-    position: absolute;
+.pic-wrapper img {
+    width: 70%;
+    border-radius: 1px;
 }
 
 tr {
     padding: 0;
-}
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-family: serif;
-    font-size: .6em;
-    padding-left: 1em;
 }
