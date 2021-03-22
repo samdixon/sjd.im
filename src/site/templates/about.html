@@ -2,10 +2,41 @@
 {% block title %}about{% endblock %}
 {% block nav_about %}active{% endblock %}
 {% block content %}
-    <div class="pic-wrapper">
-        <img class="pic" src="/static/images/sam.jpg", alt="Sam Dixon. Taken in 2020">
-    </div>
-    <p>Hey I'm Sam and welcome to my site. I am working at Healthx on DevOps stuff and am attending community college studying for a degree in computer science. I currently live in the Indianapolis area with my wonderful fianceé and cat.</p>
-    <p>Some of my interests include computers, reading, tennis, and cycling. Recently I have started to get into camping as well.</p>
-    <p>If you'd like to get in touch I have <a href="/contact">contact information</a> available. Thanks for reading!</p>
+<h3>About Me</h3>
+<p>
+<span class="pic-wrapper">
+<img src="/static/images/sam.jpg", alt="Sam Dixon. Taken in 2020">
+</span>
+Hey I'm Sam and I live in the greater Indianapolis area with my wonderful fianceé and cats. I am working at Zipari (formerly Healthx) on DevOps stuff and am attending community college studying for a degree in computer science. 
+</p>
+<p>Some of my hobbies include computers, cycling, tennis, and going on walks.</p>
+<p>With computers, the main areas I'm learning more about right now are fundamental protocols and Kubernetes.</p>
+
+<h3>About this site</h3>
+<p>This site runs on a small vps sitting behind cloudflare. The server runs Debian and serves content via nginx, gunicorn, and flask. Deployment is handled via Ansible. The source code is available on <a href="https://github.com/samdixon/sjd.im">github</a>.</p>
+
+<h3>Contact Info:</h3>
+<span class="table-title">Main contact sources:</span>
+<table>
+    <tr>
+        <td>email:</td>
+        <td><a href="mailto:sdixon@posteo.net">sdixon@posteo.net</a></td>
+    </tr>
+    <tr>
+        <td>matrix:</td>
+        <td><a href="https://matrix.to/#/@sjd:matrix.org" target="blank">@sjd:matrix.org</a></td>
+    </tr>
+</table>
+
+<span class="table-title">Other places I'm available:</span>
+<table>
+    <tr>
+        <td>freenode:</td>
+        <td>sjd</td>
+    </tr>
+    <tr>
+        <td>discord:</td>
+        <td>sjd#8405</td>
+    </tr>
+</table>
 {% endblock %}
